@@ -1,3 +1,178 @@
-body {
-  background: pink;
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, arial;
+  color: red;
+  text-transform: uppercase;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+main {
+  min-height: 680px;
+  height: calc(100% - 40px);
+}
+
+.block {
+  display: block;
+}
+.inline {
+  display: inline;
+}
+.table {
+  display: table;
+}
+.inline-table {
+  display: inline-table;
+}
+.table-cell {
+  display: table-cell;
+}
+.flex {
+  display: flex;
+}
+.inline-flex {
+  display: inline-flex;
+}
+
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+.v-top {
+  vertical-align: top;
+}
+.v-middle {
+  vertical-align: middle;
+}
+.v-bottom {
+  vertical-align: bottom;
+}
+
+#cr_portrait {
+  top: 60px;
+  width: 100%;
+}
+#cr_portrait img {
+  width: 90%;
+  max-width: 400px;
+}
+
+#cr_logo {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 400px;
+  padding-top: 1em;
+}
+
+#media_box {
+  text-align: center;
+  text-transform: uppercase;
+  width: 33%;
+  height: 600px;
+}
+
+#media_box .spotify {
+  max-width: 300px;
+  margin: 0 auto;
+}
+#media_box .spotify img {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+#mail_box {
+  width: 33%;
+}
+#mailchimp_form {
+  vertical-align: bottom;
+}
+#mailchimp_form form input {
+  text-align: center;
+  color: red;
+  border: 2px solid red;
+  padding: 1.33em 0;
+  font-size: 1em;
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  outline: none;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: red;
+    opacity: 1;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: red;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: red;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: red;
+}
+
+footer {
+  display: table;
+  height: 40px;
+  width: 100%;
+}
+
+footer .table-cell {
+  width: 50%;
+}
+
+#built_by_us {
+  padding-left: 1em;
+  text-transform: uppercase;
+}
+
+#social_box {
+  padding-right: 1em;
+}
+
+#social_box .icon {
+  width: auto;
+  height: auto;
+  max-width: 20px;
+  max-height: 20px;
+  margin: 0 5px;
+  fill: red;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    height: auto;
+  }
+  #cr_portrait {
+    position: relative;
+  }
+  #media_box {
+    padding-top: 60px;
+    width: 100%;
+  }
+  #mail_box {
+    width: 100%;
+    padding-bottom: 40px;
+  }
 }
