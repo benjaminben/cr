@@ -9,12 +9,17 @@ body {
   color: red;
   text-transform: uppercase;
   letter-spacing: 0.066em;
-  cursor: url('../assets/favicon/favicon-32x32.png') 30 50, default;
+  cursor: url('../assets/favicon/favicon-32x32.png') 16 16, default;
 }
 
 a {
   color: red;
   text-decoration: none;
+}
+
+p, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
 }
 
 main {
@@ -88,11 +93,25 @@ main {
 
 #cr_portrait {
   z-index: 0;
+  width: 33%;
+  flex: 1;
   order: 3;
+  text-align: center;
+  /*display: flex;*/
 }
 #cr_portrait img {
   width: 90%;
-  max-width: 420px;
+  max-width: 400px;
+  margin: auto;
+  /*top: -8%;
+  right: 10%;*/
+  /*top: 0;*/
+  /*min-width: 300px;*/
+  /*top: -3vw;
+  right: 1vw;*/
+  /*width: 70%;
+  min-width: 350px;*/
+  transform: translate(0, -4vw);
 }
 
 #media_box {
@@ -112,6 +131,7 @@ main {
 #media_box .spotify {
   max-width: 250px;
   margin: 0 auto;
+  transform: scale(0.85);
 }
 #media_box .spotify img {
   width: 100%;
@@ -119,12 +139,15 @@ main {
 }
 
 #mail_box {
-  width: 33%;
+  width: 34%;
   order: 2;
   align-self: flex-end;
 }
 #mailchimp_form {
   vertical-align: bottom;
+}
+#mailchimp_form p {
+  padding-bottom: 20px;
 }
 #mailchimp_form form input {
   -webkit-appearance: none;
@@ -212,13 +235,27 @@ footer .table-cell {
   }
   #cr_portrait {
     padding-top: 20px;
+    width: auto;
+    display: block;
+    text-align: right;
   }
   #cr_portrait img {
-    transform: translate(40px, 0);
+    transform: translate(65px, 0);
+    top: auto; right: auto;
+    min-width: none;
   }
   #media_box {
-    padding: 40px 0;
+    padding: 60px 0;
     width: 100%;
+  }
+  #media_box .table-cell {
+    padding: 0;
+  }
+  #media_box .spotify {
+    width: 90%;
+    max-width: 400px;
+    padding: 30px 0;
+    transform: none;
   }
   #mail_box {
     width: 100%;
