@@ -9,6 +9,7 @@ body {
   color: red;
   text-transform: uppercase;
   letter-spacing: 0.066em;
+  cursor: url('../assets/favicon/favicon-32x32.png') 30 50, default;
 }
 
 a {
@@ -98,8 +99,9 @@ main {
   text-align: center;
   text-transform: uppercase;
   width: 33%;
-  font-size: 0.9em;
+  /*font-size: 0.9em;*/
   order: 1;
+  white-space: nowrap;
   align-self: center;
 }
 
