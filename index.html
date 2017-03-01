@@ -7,11 +7,15 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <main>
-    <img id="cr_logo" src="assets/cr-logo.svg" class="relative" />
-    <div id="cr_portrait" class="absolute text-right"><img src="assets/cr-portrait.png" /></div>
+  <div id="cr_logo" class="absolute text-center">
+    <img src="assets/cr-logo.svg" />
+  </div>
+  <main class="flex">
+    <div id="cr_portrait" class="relative text-right">
+      <img class="relative" src="assets/cr-portrait.png" />
+    </div>
 
-    <div id="media_box" class="inline-table text-center">
+    <div id="media_box" class="relative inline-table text-center v-top">
       <span class="table-cell v-middle">
         <p>Listen to the new single<br/>september rose</p>
         <span class="spotify block">
@@ -22,11 +26,12 @@
       </span>
     </div>
 
-    <div id="mail_box" class="inline-table text-center">
+    <div id="mail_box" class="relative inline-table text-center">
       <span id="mailchimp_form" class="table-cell v-bottom">
         <form>
           <p>sign-up for newsletter</p>
-          <input class="block" placeholder="Enter Email Address" />
+          <input id="email_entry" type="text" class="block" placeholder="Enter Email Address" />
+          <input id="email_submit" type="submit" value="submit" />
         </form>
       </span>
     </div>

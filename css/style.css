@@ -1,9 +1,14 @@
 html, body {
   height: 100%;
   margin: 0;
+}
+
+body {
   font-family: 'Helvetica Neue', Helvetica, arial;
+  font-weight: bold;
   color: red;
   text-transform: uppercase;
+  letter-spacing: 0.066em;
 }
 
 a {
@@ -12,8 +17,11 @@ a {
 }
 
 main {
-  min-height: 680px;
-  height: calc(100% - 40px);
+  min-height: 600px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: calc(100% - 60px);
 }
 
 .block {
@@ -65,32 +73,42 @@ main {
   vertical-align: bottom;
 }
 
-#cr_portrait {
-  top: 60px;
+#cr_logo {
+  display: block;
+  margin: 0 auto;
   width: 100%;
+  padding: 20px 0;
+  z-index: 1;
 }
-#cr_portrait img {
+#cr_logo img {
   width: 90%;
   max-width: 400px;
 }
 
-#cr_logo {
-  display: block;
-  margin: 0 auto;
+#cr_portrait {
+  z-index: 0;
+  order: 3;
+}
+#cr_portrait img {
   width: 90%;
-  max-width: 400px;
-  padding-top: 1em;
+  max-width: 420px;
 }
 
 #media_box {
   text-align: center;
   text-transform: uppercase;
   width: 33%;
-  height: 600px;
+  font-size: 0.9em;
+  order: 1;
+  align-self: center;
+}
+
+#media_box .table-cell {
+  padding: 0 5%;
 }
 
 #media_box .spotify {
-  max-width: 300px;
+  max-width: 250px;
   margin: 0 auto;
 }
 #media_box .spotify img {
@@ -100,6 +118,8 @@ main {
 
 #mail_box {
   width: 33%;
+  order: 2;
+  align-self: flex-end;
 }
 #mailchimp_form {
   vertical-align: bottom;
@@ -108,6 +128,7 @@ main {
   text-align: center;
   color: red;
   border: 2px solid red;
+  box-sizing: border-box;
   padding: 1.33em 0;
   font-size: 1em;
   width: 90%;
@@ -131,11 +152,24 @@ main {
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
    color: red;
 }
+#mailchimp_form form input[type="submit"] {
+  display: none;
+  margin: 5px auto 0;
+  background: none;
+  cursor: pointer;
+  transition: all 0.33s ease;
+}
+#mailchimp_form form input[type="submit"]:hover {
+  background: red;
+  color: white;
+}
 
 footer {
   display: table;
-  height: 40px;
+  height: 60px;
   width: 100%;
+  bottom: 0;
+  left: 0;
 }
 
 footer .table-cell {
@@ -143,12 +177,13 @@ footer .table-cell {
 }
 
 #built_by_us {
-  padding-left: 1em;
+  font-size: 0.8em;
+  padding-left: 40px;
   text-transform: uppercase;
 }
 
 #social_box {
-  padding-right: 1em;
+  padding-right: 40px;
 }
 
 #social_box .icon {
@@ -160,19 +195,47 @@ footer .table-cell {
   fill: red;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   main {
     height: auto;
+    display: block!important;
+  }
+  #cr_logo {
+    padding-bottom: 40px;
   }
   #cr_portrait {
-    position: relative;
+    padding-top: 20px;
+  }
+  #cr_portrait img {
+    transform: translate(40px, 0);
   }
   #media_box {
-    padding-top: 60px;
+    padding: 60px 0;
     width: 100%;
   }
   #mail_box {
     width: 100%;
     padding-bottom: 40px;
+  }
+  footer {
+    display: flex;
+    flex-flow: column;
+  }
+  footer .table-cell {
+    display: block;
+  }
+  #built_by_us {
+    order: 2;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #social_box {
+    order: 1;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0.66em;
   }
 }
