@@ -125,7 +125,11 @@ main {
   vertical-align: bottom;
 }
 #mailchimp_form form input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   text-align: center;
+  background: transparent;
   color: red;
   border: 2px solid red;
   box-sizing: border-box;
@@ -135,6 +139,7 @@ main {
   max-width: 400px;
   margin: 0 auto;
   text-transform: uppercase;
+  border-radius: 0;
   outline: none;
 }
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
@@ -210,7 +215,7 @@ footer .table-cell {
     transform: translate(40px, 0);
   }
   #media_box {
-    padding: 60px 0;
+    padding: 40px 0;
     width: 100%;
   }
   #mail_box {
@@ -226,10 +231,9 @@ footer .table-cell {
   }
   #built_by_us {
     order: 2;
-    padding: 0;
+    padding: 0 0 40px;
     text-align: center;
     width: 100%;
-    margin-bottom: 20px;
   }
   #social_box {
     order: 1;
