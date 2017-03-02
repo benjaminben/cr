@@ -9,6 +9,7 @@ body {
   color: red;
   text-transform: uppercase;
   letter-spacing: 0.066em;
+  overflow-x: hidden;
   cursor: url('../assets/favicon/favicon-32x32.png') 16 16, default;
 }
 
@@ -26,7 +27,6 @@ main {
   min-height: 600px;
   padding-top: 100px;
   box-sizing: border-box;
-  overflow: hidden;
   height: calc(100% - 60px);
 }
 
@@ -121,9 +121,11 @@ main {
 #cr_portrait {
   z-index: 0;
   width: 37.5%;
+  height: 100%;
   flex: 1;
   order: 3;
   text-align: center;
+  animation-delay: 0.03s;
 }
 #cr_portrait img {
   margin: auto;
@@ -158,17 +160,18 @@ main {
 
 #mail_box {
   width: 25%;
+  min-width: 220px;
   order: 2;
   align-self: flex-end;
   animation-delay: 0.66s;
 }
-#mailchimp_form {
+#mc_embed_signup {
   vertical-align: bottom;
 }
-#mailchimp_form p {
+#mc_embed_signup p {
   padding-bottom: 20px;
 }
-#mailchimp_form form input {
+#mc_embed_signup form input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -201,14 +204,14 @@ main {
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
    color: red;
 }
-#mailchimp_form form input[type="submit"] {
+#mc_embed_signup form input[type="submit"] {
   display: none;
   margin: 5px auto 0;
   background: none;
   cursor: pointer;
   transition: all 0.33s ease;
 }
-#mailchimp_form form input[type="submit"]:hover {
+#mc_embed_signup form input[type="submit"]:hover {
   background: red;
   color: white;
 }
@@ -271,6 +274,7 @@ footer .table-cell {
     transform: translate(65px, 0);
     top: auto; right: auto;
     min-width: none;
+    width: 400px;
   }
   #media_box {
     padding: 60px 0;
@@ -301,21 +305,21 @@ footer .table-cell {
     opacity: 1;
     transform: translateY(0);
     animation: none;
+    padding-bottom: 1em;
   }
   footer .table-cell {
     display: block;
   }
   #built_by_us {
     order: 2;
-    padding: 0 0 40px;
+    padding: 0;
     text-align: center;
     width: 100%;
   }
   #social_box {
     order: 1;
-    padding: 0;
+    padding: 0 0 0.5em;
     text-align: center;
     width: 100%;
-    margin-bottom: 0.66em;
   }
 }
