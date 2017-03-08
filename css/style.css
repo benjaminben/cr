@@ -115,41 +115,48 @@ main {
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
+  min-height: 600px;
 }
 
 #cont {
-  min-height: 600px;
   padding-top: 100px;
   box-sizing: border-box;
-  height: calc(100% - 60px);
+  /*height: calc(100% - 66px);*/
   width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 #cr_logo {
   display: block;
   margin: 0 auto;
   width: 100%;
-  padding: 30px 0;
+  padding: 40px 0;
   z-index: 1;
   animation-delay: 1s;
 }
 #cr_logo img {
   width: 90%;
-  max-width: 300px;
+  max-width: 360px;
 }
 
 #cr_portrait {
   z-index: 0;
   width: 40%;
-  height: 100%;
+  /*height: 100%;*/
+  /*max-height: 600px;*/
+  /*max-width: 400px;*/
   flex: 1;
   order: 3;
   text-align: center;
 }
 #cr_portrait img {
   margin: auto;
-  height: 95%;
-  transform: translate(0, -4vw);
+  /*height: 95%;*/
+  min-height: 540px;
+  width: auto;
+  max-height: 600px;
+  transform: translate(0, -60px);
 }
 
 #media_box {
@@ -162,9 +169,12 @@ main {
   animation-delay: 0.33s;
 }
 
+#media_box .cta {
+  display: none;
+}
+
 #media_box .spotify {
-  max-width: 320px;
-  padding: 30px 0;
+  max-width: 300px;
   margin: 0 auto;
 }
 
@@ -176,16 +186,18 @@ main {
 #mail_box {
   width: 20%;
   min-width: 200px;
+  padding: 0 1em;
   order: 2;
   align-self: flex-end;
   animation-delay: 0.66s;
   font-size: 14px;
+  font-style: italic;
 }
 #mc_embed_signup {
   vertical-align: bottom;
 }
 #mc_embed_signup p {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 #mc_embed_signup form input {
   -webkit-appearance: none;
@@ -230,7 +242,6 @@ main {
   background: none;
   cursor: pointer;
   transition: all 0.33s ease;
-  font-style: normal;
 }
 #mc_embed_signup form input[type="submit"]:hover {
   background: black;
@@ -241,7 +252,7 @@ footer {
   display: table;
   height: 60px;
   width: 100%;
-  bottom: 0;
+  bottom: 6px;
   left: 0;
   opacity: 0;
   transform: translateY(10%);
@@ -272,17 +283,33 @@ footer .table-cell {
 }
 
 @media screen and (max-width: 768px) {
+  #nav {
+    position: relative!important;
+    font-size: 0.8em;
+    animation: none;
+    opacity: 1;
+  }
+  #nav ul {
+    display: block;
+    text-align: center;
+  }
+  #nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
   main {
     height: auto;
   }
   #cont {
     height: auto;
+    padding-top: 40px;
     display: block!important;
   }
   #cr_logo {
-    padding-bottom: 40px;
+    padding: 30px 0 0;
     opacity: 1;
     transform: translateY(0);
+    position: relative!important;
     animation: none;
   }
   #cr_portrait {
@@ -299,6 +326,7 @@ footer .table-cell {
     top: auto; right: auto;
     left: 10%;
     min-width: none;
+    min-height: none;
     width: 400px;
   }
   #media_box {
@@ -314,14 +342,24 @@ footer .table-cell {
   #media_box .spotify {
     width: 90%;
     max-width: 400px;
+    padding: 30px 0;
     transform: none;
+  }
+  #media_box .cta {
+    display: block;
+  }
+  #media_box .spotify iframe {
+    background: url(../assets/rose.png);
+    background-size: 6.66% auto;
+    background-position: -2.8% 0;
   }
   #mail_box {
     width: 100%;
-    padding-bottom: 40px;
+    padding: 0 0 40px;
     opacity: 1;
     transform: translateY(0);
     animation: none;
+    font-style: italic;
   }
   footer {
     display: flex;

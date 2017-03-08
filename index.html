@@ -14,17 +14,17 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body class="loading">
-  <nav id="nav" class="absolute fade-in-down">
-    <ul>
-      <li><a href="http://google.com">Rosegang</a></li>
-      <li><a href="http://google.com">Videos</a></li>
-      <li><a href="http://google.com">Music</a></li>
-    </ul>
-  </nav>
-  <main>
+  <main class="relative">
     <div id="cr_logo" class="absolute text-center fade-in-down">
-      <img src="assets/cr-logo.svg" />
+      <img src="assets/cr-logo_shadow.svg" />
     </div>
+    <nav id="nav" class="absolute fade-in-down">
+      <ul>
+        <li><a href="https://monarca.la/cailin-russo">Rosegang</a></li>
+        <li><a href="https://www.youtube.com/channel/UCMKkSnpBr0kydoGyp2lKqWg">Videos</a></li>
+        <li><a href="https://open.spotify.com/artist/2org0PubBAxTvjVvLo9PJ0">Music</a></li>
+      </ul>
+    </nav>
     <div id="cont" class="flex">
       <div id="cr_portrait" class="relative text-right fade-in-up">
         <img class="relative" src="assets/cr-portrait.jpg" />
@@ -32,12 +32,12 @@
 
       <div id="media_box" class="relative inline-table text-center v-top fade-in-up">
         <span class="table-cell v-middle">
-          <!-- <p>Listen to the new single<br/>september rose</p> -->
+          <p class="cta">Listen to the new single<br/>september rose</p>
           <span class="spotify block">
             <img class="block" src="assets/september-rose-cover.jpg" />
             <iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A2KvLsBXs4pOPjnxiifsQX7" width="100%" height="80" frameborder="0" allowtransparency="true"></iframe>
           </span>
-          <!-- <p><a href="https://www.youtube.com/channel/UCMKkSnpBr0kydoGyp2lKqWg">watch video</a></p> -->
+          <p class="cta"><a href="https://www.youtube.com/channel/UCMKkSnpBr0kydoGyp2lKqWg">watch video</a></p>
         </span>
       </div>
 
@@ -56,7 +56,7 @@
         </div>
       </div>
     </div>
-    <footer class="relative">
+    <footer class="absolute">
       <span id="built_by_us" class="table-cell text-left v-middle">
         <a href="http://wethem.us/">
           built by .us
