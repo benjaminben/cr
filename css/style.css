@@ -343,7 +343,7 @@ footer .table-cell {
   }
   main {
     height: auto;
-    padding: 0 0 60px;
+    padding: 0;
   }
   #cont {
     height: auto;
@@ -414,7 +414,7 @@ footer .table-cell {
     display: block;
   }
   #media_box .spotify iframe {
-    background: url(../assets/rose.png);
+    /*background: url(../assets/rose.png);*/
     background-size: 6.66% auto;
     background-position: -2.8% 0;
   }
@@ -422,6 +422,7 @@ footer .table-cell {
     width: 100%;
     padding: 0 0 40px;
     opacity: 1;
+    font-size: 1em;
     -webkit-transform: translateY(0);
             transform: translateY(0);
     -webkit-animation: none;
@@ -432,6 +433,7 @@ footer .table-cell {
             order: 3;
   }
   footer {
+    position: relative!important;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
